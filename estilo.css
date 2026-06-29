@@ -245,6 +245,39 @@ body {
 
 .text-muted-footer { color: #aaa; }
 .textoo{ color: #fef600; }
+
+#btnSubir {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 999;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid var(--dorado);
+  background-color: var(--azul-boca);
+  color: var(--dorado);
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: opacity 0.3s, transform 0.3s, background-color 0.2s, visibility 0.3s;
+}
+
+#btnSubir.mostrar {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#btnSubir:hover {
+  background-color: var(--dorado);
+  color: var(--azul-boca);
+}
+
 @media (max-width: 768px) {
   .hero-section h1 { font-size: 2em; letter-spacing: 2px; }
   .seccion-titulo { font-size: 1.5em; }
