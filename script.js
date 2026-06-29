@@ -25,4 +25,26 @@ document.addEventListener("DOMContentLoaded", function () {
       form.reset();
     });
   }
+
+  // ===== BOTÓN SUBIR ARRIBA =====
+  const btnSubir = document.getElementById("btnSubir");
+
+  if (btnSubir) {
+    // Muestra el botón solo cuando el usuario scrollea hacia abajo
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 300) {
+        btnSubir.classList.add("mostrar");
+      } else {
+        btnSubir.classList.remove("mostrar");
+      }
+    });
+
+    // Al hacer click, sube de inmediato hasta arriba de la página
+    btnSubir.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  }
 });
